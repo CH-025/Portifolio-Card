@@ -6,10 +6,10 @@
     padding: 0px;
 }
 
-html, body {
+body {
 
-    @media screen and (max-width:780px) {
-        min-width: 300px;
+    @media screen and (min-width:780px) {
+        max-width: 1000px;
     }
 }
 
@@ -38,6 +38,10 @@ body {
     flex-direction: column;
     gap: 40px;
     min-height: 450px;
+
+    @media screen and (max-width:780px) {
+        width: auto;
+    }
 }
 
 .portifolio-card__moude-img > img {
@@ -72,6 +76,10 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    @media screen and (max-width:576px) {
+        gap: 30px;
+    }
 }
 
 .portifolio-card__info > div {
@@ -103,11 +111,19 @@ a {
     position: relative;
     flex-shrink: 0;
     transition: all .2s;
-}
 
-a:hover {
+    @media screen and (max-width:768px) {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+}
+@media screen and (min-width:768px) {
+    a:hover {
     transform: scale(1.2) translateY(-5px);
 }
+}
+
 
 .facebook {
     background: linear-gradient(45deg, #3b5998, #0078d7);
@@ -135,6 +151,11 @@ a:hover {
     justify-content: center;
     gap: 2rem;
     flex-direction: ;
+
+    @media screen and (max-width:576px) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
 
@@ -148,11 +169,24 @@ button {
     color: white;
     cursor: pointer;
     transition: all .2s;
+
+    @media screen and (max-width:768px) {
+        min-width: 170px;
+    }
+
+    @media screen and (min-width:780px) {
+        min-width: inherit;
+        width: 100px;
+        max-width: 350px;
+    }
 }
 
-button:hover {
+@media screen and (min-width:576px) {
+    button:hover {
     transform: translateY(-5px);
 }
+}
+
 
 .orange {
     background: linear-gradient(45deg, #d5135a, #f04f15);
